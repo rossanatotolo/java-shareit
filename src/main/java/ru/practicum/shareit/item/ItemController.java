@@ -19,7 +19,7 @@ public class ItemController {
     private final ItemService itemService;
 
     @GetMapping
-    public List<ItemDto> getAllItems(@RequestHeader("X-Sharer-User-Id") final long userId) {
+    public List<ItemDto> getAllItems(@RequestHeader("X-Sharer-User-Id") @Positive final long userId) {
         return itemService.getAllItems(userId);
     }
 
@@ -30,13 +30,13 @@ public class ItemController {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    public ItemDto itemCreate(@RequestHeader("X-Sharer-User-Id") final long userId,
+    public ItemDto itemCreate(@RequestHeader("X-Sharer-User-Id") @Positive final long userId,
                               @Valid @RequestBody final ItemDto itemDto) {
         return itemService.itemCreate(userId, itemDto);
     }
 
     @PatchMapping("/{itemId}")
-    public ItemDto itemUpdate(@RequestHeader("X-Sharer-User-Id") final long userId,
+    public ItemDto itemUpdate(@RequestHeader("X-Sharer-User-Id") @Positive final long userId,
                               @PathVariable @Positive final long itemId,
                               @RequestBody final ItemDto itemDto) {
         return itemService.itemUpdate(userId, itemId, itemDto);

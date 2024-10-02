@@ -58,7 +58,6 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public void userDelete(final Long userId) {
-        checkUserId(userId);
         userRepository.userDelete(userId);
         log.info("Пользователь с id {} удален.", userId);
     }
