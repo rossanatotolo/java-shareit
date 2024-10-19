@@ -1,16 +1,17 @@
 package ru.practicum.shareit.user.model;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.NotNull;
+import jakarta.persistence.*;
 import lombok.Data;
 
 @Data
+@Entity
+@Table(name = "users")
 public class User {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    @NotBlank(message = "Имя пользователя должно быть указано")
+    @Column(name = "name", nullable = false)
     private String name;
-    @NotNull(message = "Имейл должен быть указан")
-    @Email(message = "Имейл должен содержать символ «@». Формат имейла: example@mail.com")
+    @Column(name = "email", nullable = false, unique = true)
     private String email;
 }
