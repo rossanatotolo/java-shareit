@@ -31,6 +31,7 @@ import java.util.stream.Collectors;
 @Service
 @Slf4j
 @RequiredArgsConstructor
+@Transactional
 public class ItemServiceImpl implements ItemService {
     private final ItemRepository itemRepository;
     private final UserRepository userRepository;
@@ -74,7 +75,6 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    @Transactional
     public ItemDto itemCreate(final long userId, final ItemDto itemDto) {
         final User user = userRepository.findById(userId)
                 .orElseThrow(() -> new NotFoundException("Пользователя с id = {} нет." + userId));
@@ -85,7 +85,6 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    @Transactional
     public ItemDto itemUpdate(final long userId, final long itemId, final ItemDto itemDto) {
         checkUserId(userId);
 
@@ -114,7 +113,6 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    @Transactional
     public List<ItemDto> itemSearch(final String text) {
         if (text.isEmpty()) {
             return new ArrayList<>();
@@ -125,7 +123,6 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    @Transactional
     public void itemDelete(final Long itemId) {
         Item item = itemRepository.findById(itemId)
                 .orElseThrow(() -> new NotFoundException("Вещь с id: " + itemId + " не найдена."));
@@ -135,7 +132,6 @@ public class ItemServiceImpl implements ItemService {
     }
 
     @Override
-    @Transactional
     public CommentDto addComments(long userId, long itemId, CommentDto commentDto) {
         final User owner = userRepository.findById(userId)
                 .orElseThrow(() -> new NotFoundException("Пользователя с id = {} не существует." + userId));

@@ -17,6 +17,7 @@ import java.util.Objects;
 @Service
 @Slf4j
 @RequiredArgsConstructor
+@Transactional
 public class UserServiceImpl implements UserService {
     private final UserRepository userRepository;
     private final UserMapper userMapper;
@@ -41,7 +42,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional
     public UserDto userCreate(final UserDto userDto) {
         if (userRepository.findAll().contains(userMapper.toUser(userDto))) {
             log.warn("Пользователь с id {} уже добавлен в список.", userDto.getId());
@@ -54,7 +54,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional
     public UserDto userUpdate(final long userId, final UserDto userDto) {
         final User user = userRepository.findById(userId)
                 .orElseThrow(() -> new NotFoundException("Пользователя с id = {} не существует." + userId));
@@ -72,7 +71,6 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    @Transactional
     public void userDelete(final Long userId) {
         final User user = userRepository.findById(userId)
                 .orElseThrow(() -> new NotFoundException("Пользователя с id = {} не существует." + userId));

@@ -12,6 +12,5 @@ public class UserDto {
     private String name;
     @NotNull
     @Email(message = "Имейл должен содержать символ «@». Формат имейла: example@mail.com")
-    @Email
     private String email;
 }
