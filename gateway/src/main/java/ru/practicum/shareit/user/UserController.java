@@ -19,8 +19,6 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.practicum.shareit.user.dto.UserDto;
 
 
-import java.util.List;
-
 @RestController
 @RequestMapping(path = "/users")
 @RequiredArgsConstructor
