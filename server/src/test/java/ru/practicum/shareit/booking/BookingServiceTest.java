@@ -55,6 +55,7 @@ public class BookingServiceTest {
 
     @Mock
     private ItemRepository itemRepository;
+
     private final BookingTimeValidator validator = new BookingTimeValidator();
 
     private final Sort sort = Sort.by(Sort.Direction.DESC, "start");
@@ -75,9 +76,7 @@ public class BookingServiceTest {
     public void setUp() {
 
         bookingMapper = new BookingMapper();
-
         UserMapper userMapper = new UserMapper();
-
         ItemMapper itemMapper = new ItemMapper();
 
         bookingService = new BookingServiceImpl(bookingMapper, bookingRepository,
@@ -558,5 +557,17 @@ public class BookingServiceTest {
 
         assertEquals(1, bookingDtoOutputs.size());
         assertEquals(BookingStatus.REJECTED, bookingDtoOutputs.iterator().next().getStatus());
+    }
+
+    @Test
+    @Order(29)
+    @DisplayName("BookingService_approvedUserNotOwner")
+    void testApprovedUserNotOwner() {
+
+        final ValidationException exp = assertThrows(
+                ValidationException.class,
+                () -> bookingService.confirmationBooking(1L, 1L, true));
+
+        assertEquals("Запроса на бронирование не существует или вы не являетесь владельцем.", exp.getMessage());
     }
 }

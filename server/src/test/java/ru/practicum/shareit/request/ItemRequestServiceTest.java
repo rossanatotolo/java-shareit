@@ -112,7 +112,6 @@ public class ItemRequestServiceTest {
         i1.setItemId(1L);
         i1.setOwnerId(1L);
         i1.setItemId(1L);
-
     }
 
     @Test

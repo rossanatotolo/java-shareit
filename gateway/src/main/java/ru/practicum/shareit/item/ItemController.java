@@ -21,7 +21,6 @@ import org.springframework.web.bind.annotation.RestController;
 import ru.practicum.shareit.item.dto.CommentDto;
 import ru.practicum.shareit.item.dto.ItemDto;
 
-
 @RestController
 @RequestMapping("/items")
 @RequiredArgsConstructor

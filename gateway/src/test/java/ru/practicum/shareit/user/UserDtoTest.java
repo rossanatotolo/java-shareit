@@ -15,7 +15,6 @@ import org.springframework.test.annotation.DirtiesContext;
 import ru.practicum.shareit.ShareItGateway;
 import ru.practicum.shareit.user.dto.UserDto;
 
-
 import java.util.Set;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -40,7 +39,7 @@ public class UserDtoTest {
         userDto.setEmail("gromgrommolnia@yandex.ru");
 
         String json = objectMapper.writeValueAsString(userDto);
-        assertThat(json).contains("\"name\":\"Katia\"","\"email\":\"gromgrommolnia@yandex.ru\"");
+        assertThat(json).contains("\"name\":\"Katia\"", "\"email\":\"gromgrommolnia@yandex.ru\"");
     }
 
     @Test
@@ -71,7 +70,7 @@ public class UserDtoTest {
     }
 
     @Test
-    @Order(3)
+    @Order(4)
     @DirtiesContext
     @DisplayName("UserDto_invalid")
     public void invalidTest() {
@@ -85,5 +84,4 @@ public class UserDtoTest {
 
         assertThat(invalidConstraints).isNotEmpty();
     }
-
 }

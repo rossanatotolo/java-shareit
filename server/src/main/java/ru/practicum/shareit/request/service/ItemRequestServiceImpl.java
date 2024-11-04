@@ -35,7 +35,6 @@ public class ItemRequestServiceImpl implements ItemRequestService {
     private final ItemMapper itemMapper;
     final Sort sort = Sort.by(Sort.Direction.DESC, "created");
 
-
     @Override
     public ItemRequestDtoOutput itemRequestCreate(final long userId, final ItemRequestDto itemRequestDto) {
         final User user = userRepository.findById(userId)

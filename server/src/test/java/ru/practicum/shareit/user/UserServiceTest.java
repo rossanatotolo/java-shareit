@@ -55,7 +55,6 @@ public class UserServiceTest {
         user1.setId(1L);
     }
 
-
     @Test
     @Order(1)
     @DisplayName("UserService_userCreate")
@@ -100,7 +99,6 @@ public class UserServiceTest {
                 () -> userService.userUpdate(1, userDto1)
         );
     }
-
 
     @Test
     @Order(5)
