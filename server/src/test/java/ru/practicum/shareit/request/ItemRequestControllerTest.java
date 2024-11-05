@@ -2,7 +2,6 @@ package ru.practicum.shareit.request;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -44,7 +43,6 @@ class ItemRequestControllerTest {
     private static final String HEADER = "X-Sharer-User-Id";
 
     @Test
-    @Order(1)
     @DirtiesContext
     @DisplayName("ItemRequestController_itemRequestCreate")
     void testItemRequestCreate() throws Exception {
@@ -71,7 +69,6 @@ class ItemRequestControllerTest {
     }
 
     @Test
-    @Order(2)
     @DirtiesContext
     @DisplayName("ItemRequestController_getAllRequestByUser")
     void testGetAllRequestByUser() throws Exception {
@@ -89,7 +86,6 @@ class ItemRequestControllerTest {
     }
 
     @Test
-    @Order(3)
     @DirtiesContext
     @DisplayName("ItemRequestController_getAllRequests")
     void testGetAllRequests() throws Exception {
@@ -107,7 +103,6 @@ class ItemRequestControllerTest {
     }
 
     @Test
-    @Order(4)
     @DirtiesContext
     @DisplayName("ItemRequestController_getRequestById")
     void testGetRequestById() throws Exception {

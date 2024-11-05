@@ -2,7 +2,6 @@ package ru.practicum.shareit.user;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +41,6 @@ class UserControllerTest {
     private UserService userService;
 
     @Test
-    @Order(1)
     @DirtiesContext
     @DisplayName("UserController_userCreate")
     void testUserCreate() throws Exception {
@@ -61,7 +59,6 @@ class UserControllerTest {
     }
 
     @Test
-    @Order(2)
     @DirtiesContext
     @DisplayName("UserController_userUpdate")
     void testUserUpdate() throws Exception {
@@ -80,7 +77,6 @@ class UserControllerTest {
     }
 
     @Test
-    @Order(3)
     @DirtiesContext
     @DisplayName("UserController_getUserById")
     void testGetUserById() throws Exception {
@@ -97,7 +93,6 @@ class UserControllerTest {
     }
 
     @Test
-    @Order(4)
     @DirtiesContext
     @DisplayName("UserController_getAllUsers")
     void testGetAllUsers() throws Exception {
@@ -114,7 +109,6 @@ class UserControllerTest {
     }
 
     @Test
-    @Order(5)
     @DirtiesContext
     @DisplayName("UserController_userDelete")
     void testUserDelete() throws Exception {

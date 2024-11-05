@@ -2,7 +2,6 @@ package ru.practicum.shareit.booking;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -122,7 +121,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(1)
     @DisplayName("BookingService_createNotUser")
     void testCreateNotUser() {
 
@@ -133,7 +131,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(2)
     @DisplayName("BookingService_createNotItem")
     void testCreateNotItem() {
 
@@ -146,7 +143,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(3)
     @DisplayName("BookingService_createNotAvailable")
     void testCreateNotAvailable() {
 
@@ -160,7 +156,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(4)
     @DisplayName("BookingService_createNotGoodTime")
     void testCreateNotGoodTime() {
 
@@ -175,7 +170,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(5)
     @DisplayName("BookingService_createEqualsTime")
     void testCreateEqualsTime() {
 
@@ -192,7 +186,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(6)
     @DisplayName("BookingService_create")
     void testCreate() {
 
@@ -208,7 +201,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(7)
     @DisplayName("BookingService_confirmationNotBooking")
     void testConfirmationNotBooking() {
 
@@ -219,7 +211,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(8)
     @DisplayName("BookingService_confirmationStatusNotWaiting")
     void testConfirmationStatusNotWaiting() {
 
@@ -240,7 +231,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(9)
     @DisplayName("BookingService_confirmationTrue")
     void testConfirmationTrue() {
 
@@ -255,7 +245,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(10)
     @DisplayName("BookingService_confirmationFalse")
     void testConfirmationFalse() {
 
@@ -270,7 +259,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(11)
     @DisplayName("BookingService_getByIdNotBooking")
     void testGetByIdNotBooking() {
 
@@ -281,7 +269,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(12)
     @DisplayName("BookingService_getByIdUserNotOwner")
     void testGetByIdUserNotOwner() {
 
@@ -294,7 +281,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(13)
     @DisplayName("BookingService_getBookingById")
     void testGetBookingById() {
 
@@ -307,7 +293,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(14)
     @DisplayName("BookingService_getAllByUserIdNotUser")
     void testGetAllByUserIdNotUser() {
 
@@ -318,7 +303,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(15)
     @DisplayName("BookingService_getAllByUserIdAll")
     void testGetAllByUserIdAll() {
 
@@ -331,7 +315,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(16)
     @DisplayName("BookingService_getAllByUserIdCurrent")
     void testGetAllByUserIdCurrent() {
 
@@ -356,7 +339,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(17)
     @DisplayName("BookingService_getAllByUserIdPast")
     void testGetAllByUserIdPast() {
 
@@ -371,7 +353,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(18)
     @DisplayName("BookingService_getAllByUserIdFuture")
     void testGetAllByUserIdFuture() {
 
@@ -386,7 +367,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(19)
     @DisplayName("BookingService_getAllByUserIdWaiting")
     void testGetAllByUserIdWaiting() {
 
@@ -401,7 +381,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(20)
     @DisplayName("BookingService_getAllByUserIdRejected")
     void testGetAllByUserIdRejected() {
 
@@ -424,7 +403,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(21)
     @DisplayName("BookingService_getAllByOwnerIdNotUser")
     void testGetAllByOwnerIdNotUser() {
 
@@ -435,7 +413,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(22)
     @DisplayName("BookingService_getAllByOwnerIdNotItem")
     void testGetAllByOwnerIdNotItem() {
 
@@ -448,7 +425,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(23)
     @DisplayName("BookingService_getAllByOwnerIdAll")
     void testGetAllByOwnerIdAll() {
 
@@ -462,7 +438,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(24)
     @DisplayName("BookingService_getAllByOwnerIdCurrent")
     void testGetAllByOwnerIdCurrent() {
 
@@ -488,7 +463,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(25)
     @DisplayName("BookingService_getAllByOwnerIdPast")
     void testGetAllByOwnerIdPast() {
 
@@ -504,7 +478,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(26)
     @DisplayName("BookingService_getAllByOwnerIdFuture")
     void testGetAllByOwnerIdFuture() {
 
@@ -520,7 +493,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(27)
     @DisplayName("BookingService_getAllByOwnerIdWaiting")
     void testGetAllByOwnerIdWaiting() {
 
@@ -536,7 +508,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(28)
     @DisplayName("BookingService_getAllByOwnerIdRejected")
     void testGetAllByOwnerIdRejected() {
 
@@ -560,7 +531,6 @@ public class BookingServiceTest {
     }
 
     @Test
-    @Order(29)
     @DisplayName("BookingService_approvedUserNotOwner")
     void testApprovedUserNotOwner() {
 

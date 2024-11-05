@@ -4,7 +4,6 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -67,7 +66,6 @@ public class BookingControllerTest {
     }
 
     @Test
-    @Order(1)
     @DisplayName("BookingController_createBooking")
     public void testCreateBooking() throws Exception {
 
@@ -86,7 +84,6 @@ public class BookingControllerTest {
     }
 
     @Test
-    @Order(2)
     @DisplayName("BookingController_confirmationBooking")
     public void testConfirmationBooking() throws Exception {
 
@@ -103,7 +100,6 @@ public class BookingControllerTest {
     }
 
     @Test
-    @Order(3)
     @DisplayName("BookingController_getBookingById")
     public void testGetBookingById() throws Exception {
 
@@ -117,7 +113,6 @@ public class BookingControllerTest {
     }
 
     @Test
-    @Order(4)
     @DisplayName("BookingController_getAllBookingsFromUser")
     public void testGetAllBookingsFromUser() throws Exception {
 
@@ -132,7 +127,6 @@ public class BookingControllerTest {
     }
 
     @Test
-    @Order(5)
     @DisplayName("BookingController_getAllBookingsFromOwner")
     public void testGetAllBookingsFromOwner() throws Exception {
 

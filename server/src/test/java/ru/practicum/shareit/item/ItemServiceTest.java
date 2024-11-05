@@ -2,7 +2,6 @@ package ru.practicum.shareit.item;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -146,7 +145,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(1)
     @DisplayName("ItemService_createNotOwner")
     void testCreateNotOwner() {
 
@@ -157,7 +155,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(2)
     @DisplayName("ItemService_createWithOutRequest")
     void testCreateWithOutRequest() {
 
@@ -175,7 +172,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(3)
     @DisplayName("ItemService_createWithRequest")
     void testCreateWithRequest() {
 
@@ -189,7 +185,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(4)
     @DisplayName("ItemService_itemCreateUserNotFound")
     void testItemCreateUserNotFound() {
 
@@ -203,7 +198,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(5)
     @DisplayName("ItemService_updateNotItem")
     void testUpdateNotItem() {
 
@@ -214,7 +208,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(6)
     @DisplayName("ItemService_itemUpdateSuccess")
     void testItemUpdateSuccess() {
 
@@ -233,7 +226,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(7)
     @DisplayName("ItemService_ItemUpdateNotFound")
     void testItemUpdateNotFound() {
 
@@ -248,7 +240,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(8)
     @DisplayName("ItemService_updateName")
     void testUpdateName() {
 
@@ -265,7 +256,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(9)
     @DisplayName("ItemService_updateDescription")
     void testUpdateDescription() {
 
@@ -285,7 +275,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(10)
     @DisplayName("ItemService_updateDescriptionIsNull")
     void testUpdateDescriptionIsNull() {
 
@@ -303,7 +292,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(11)
     @DisplayName("ItemService_updateDescriptionIsBlank")
     void testUpdateDescriptionIsBlank() {
 
@@ -320,7 +308,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(12)
     @DisplayName("ItemService_updateNameIsNull")
     void testUpdateNameIsNull() {
 
@@ -338,7 +325,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(13)
     @DisplayName("ItemService_updateNameIsBlank")
     void testUpdateNameIsBlank() {
 
@@ -355,7 +341,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(14)
     @DisplayName("ItemService_updateAvailableIsNull")
     void testUpdateAvailableIsNull() {
 
@@ -373,7 +358,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(15)
     @DisplayName("ItemService_updateAvailable")
     void testUpdateAvailable() {
 
@@ -390,7 +374,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(16)
     @DisplayName("ItemService_getItemByIdSuccess")
     void testGetItemByIdSuccess() {
 
@@ -420,7 +403,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(17)
     @DisplayName("ItemService_getByIdNotItem")
     void testGetByIdNotItem() {
 
@@ -431,7 +413,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(18)
     @DisplayName("ItemService_getByIdNoOwner")
     void testGetByIdNoOwner() {
 
@@ -447,7 +428,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(19)
     @DisplayName("ItemService_deleteNotItem")
     void testDeleteNotItem() {
 
@@ -458,7 +438,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(20)
     @DisplayName("ItemService_deleteNotFound")
     void testItemDeleteNotFound() {
 
@@ -473,7 +452,6 @@ public class ItemServiceTest {
 
 
     @Test
-    @Order(21)
     @DisplayName("ItemService_itemDelete")
     void testItemDelete() {
 
@@ -485,7 +463,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(22)
     @DisplayName("ItemService_getAllItems")
     void testGetAllItems() {
 
@@ -501,7 +478,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(23)
     @DisplayName("ItemService_getAllEmptyItems")
     void testGetAllEmptyItems() {
 
@@ -515,7 +491,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(24)
     @DisplayName("ItemService_getAllItemsUserNotFound")
     void testGetAllItemsUserNotFound() {
 
@@ -525,7 +500,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(25)
     @DisplayName("ItemService_searchTextEmpty")
     void testSearchTextEmpty() {
 
@@ -536,7 +510,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(26)
     @DisplayName("ItemService_searchText")
     void testSearchText() {
 
@@ -548,7 +521,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(27)
     @DisplayName("ItemService_itemSearchSuccess")
     void testItemSearchSuccess() {
 
@@ -566,7 +538,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(28)
     @DisplayName("ItemService_itemSearchNoResults")
     void testItemSearchNoResults() {
 
@@ -579,7 +550,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(29)
     @DisplayName("ItemService_addCommentNotUser")
     void testAddCommentNotUser() {
 
@@ -590,7 +560,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(30)
     @DisplayName("ItemService_addCommentNotItem")
     void testAddCommentNotItem() {
 
@@ -603,7 +572,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(31)
     @DisplayName("ItemService_noAddCommentWithOutBooking")
     void testNoAddCommentWithOutBooking() {
 
@@ -617,7 +585,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(32)
     @DisplayName("ItemService_addComments")
     void testAddComments() {
 
@@ -641,7 +608,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(33)
     @DisplayName("ItemService_updateItemIfNotValidOwner")
     void testUpdateItemIfNotValidOwner() {
         final User user10 = new User();
@@ -659,7 +625,6 @@ public class ItemServiceTest {
     }
 
     @Test
-    @Order(34)
     @DisplayName("ItemService_createWithRequestEmpty")
     void testCreateWithRequestEmpty() {
 

@@ -42,7 +42,6 @@ public class UserServiceSpringBootTest {
     }
 
     @Test
-    @Order(1)
     @DirtiesContext
     @DisplayName("UserService_userCreate")
     void testUserCreate() {
@@ -51,7 +50,6 @@ public class UserServiceSpringBootTest {
     }
 
     @Test
-    @Order(2)
     @DirtiesContext
     @DisplayName("UserService_userUpdate")
     void testUserUpdate() {
@@ -78,7 +76,6 @@ public class UserServiceSpringBootTest {
     }
 
     @Test
-    @Order(3)
     @DirtiesContext
     @DisplayName("UserService_getUserById")
     void testGetUserById() {
@@ -87,7 +84,6 @@ public class UserServiceSpringBootTest {
     }
 
     @Test
-    @Order(4)
     @DirtiesContext
     @DisplayName("UserService_userDelete")
     void testUserDelete() {

@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -78,7 +77,6 @@ public class ItemServiceSpringBootTest {
     }
 
     @Test
-    @Order(1)
     @DirtiesContext
     @DisplayName("ItemService_itemUpdate")
     void testItemUpdate() {
@@ -98,7 +96,6 @@ public class ItemServiceSpringBootTest {
     }
 
     @Test
-    @Order(2)
     @DirtiesContext
     @DisplayName("ItemService_getAllItems")
     void testGetAllItems() {
@@ -108,7 +105,6 @@ public class ItemServiceSpringBootTest {
     }
 
     @Test
-    @Order(3)
     @DirtiesContext
     @DisplayName("ItemService_itemSearch")
     void testItemSearch() {
@@ -118,7 +114,6 @@ public class ItemServiceSpringBootTest {
     }
 
     @Test
-    @Order(4)
     @DirtiesContext
     @DisplayName("ItemService_addComments")
     void testAddComments() {

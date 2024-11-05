@@ -3,7 +3,6 @@ package ru.practicum.shareit.booking;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.json.JsonTest;
@@ -24,7 +23,6 @@ public class BookingDtoInputTest {
     private ObjectMapper objectMapper;
 
     @Test
-    @Order(1)
     @DirtiesContext
     @DisplayName("BookingDtoInput_serializeJson")
     void serializeJsonTest() throws Exception {
@@ -39,7 +37,6 @@ public class BookingDtoInputTest {
     }
 
     @Test
-    @Order(2)
     @DirtiesContext
     @DisplayName("BookingDtoInput_deserializeJson")
     void deserializeJsonTest() throws Exception {

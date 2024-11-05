@@ -2,7 +2,6 @@ package ru.practicum.shareit.request;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -115,7 +114,6 @@ public class ItemRequestServiceTest {
     }
 
     @Test
-    @Order(1)
     @DisplayName("ItemRequestService_itemRequestCreateNotUser")
     void testItemRequestCreateNotUser() {
 
@@ -126,7 +124,6 @@ public class ItemRequestServiceTest {
     }
 
     @Test
-    @Order(2)
     @DisplayName("ItemRequestService_itemRequestCreate")
     void testItemRequestCreate() {
 
@@ -141,7 +138,6 @@ public class ItemRequestServiceTest {
     }
 
     @Test
-    @Order(3)
     @DisplayName("ItemRequestService_getAllRequestByUser")
     void testGetAllRequestByUser() {
 
@@ -157,7 +153,6 @@ public class ItemRequestServiceTest {
     }
 
     @Test
-    @Order(4)
     @DisplayName("ItemRequestService_getAllRequests")
     void testGetAllRequests() {
 
@@ -171,7 +166,6 @@ public class ItemRequestServiceTest {
     }
 
     @Test
-    @Order(5)
     @DisplayName("ItemRequestService_getByIdNotRequest")
     void testGetByIdNotRequest() {
 
@@ -182,7 +176,6 @@ public class ItemRequestServiceTest {
     }
 
     @Test
-    @Order(6)
     @DisplayName("ItemRequestService_getRequestById")
     void testGetRequestById() {
 

@@ -2,7 +2,6 @@ package ru.practicum.shareit.item;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -47,7 +46,6 @@ class ItemControllerTest {
     private static final String HEADER = "X-Sharer-User-Id";
 
     @Test
-    @Order(1)
     @DirtiesContext
     @DisplayName("ItemController_itemCreate")
     void testItemCreate() throws Exception {
@@ -67,7 +65,6 @@ class ItemControllerTest {
     }
 
     @Test
-    @Order(2)
     @DirtiesContext
     @DisplayName("ItemController_itemUpdate")
     void testItemUpdate() throws Exception {
@@ -87,7 +84,6 @@ class ItemControllerTest {
     }
 
     @Test
-    @Order(3)
     @DirtiesContext
     @DisplayName("ItemController_getItemById")
     void testGetItemById() throws Exception {
@@ -105,7 +101,6 @@ class ItemControllerTest {
     }
 
     @Test
-    @Order(4)
     @DirtiesContext
     @DisplayName("ItemController_getAllItems")
     void testGetAllItems() throws Exception {
@@ -123,7 +118,6 @@ class ItemControllerTest {
     }
 
     @Test
-    @Order(5)
     @DirtiesContext
     @DisplayName("ItemController_itemSearch")
     void testItemSearch() throws Exception {
@@ -141,7 +135,6 @@ class ItemControllerTest {
     }
 
     @Test
-    @Order(6)
     @DirtiesContext
     @DisplayName("ItemController_addComments")
     void testAddComments() throws Exception {
@@ -162,7 +155,6 @@ class ItemControllerTest {
     }
 
     @Test
-    @Order(7)
     @DirtiesContext
     @DisplayName("ItemController_itemDelete")
     void testItemDelete() throws Exception {

@@ -1,7 +1,6 @@
 package ru.practicum.shareit.item;
 
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
@@ -32,7 +31,6 @@ public class ItemRepositoryTest {
     private ItemRequestRepository itemRequestRepository;
 
     @Test
-    @Order(1)
     @DisplayName("ItemRepository_empty")
     public void testEmpty() {
         final List<Item> items = itemRepository.findAll();
@@ -41,7 +39,6 @@ public class ItemRepositoryTest {
     }
 
     @Test
-    @Order(2)
     @DirtiesContext
     @DisplayName("ItemRepository_findAllByOwnerId")
     public void testFindAllByOwnerId() {
@@ -66,7 +63,6 @@ public class ItemRepositoryTest {
     }
 
     @Test
-    @Order(3)
     @DirtiesContext
     @DisplayName("ItemRepository_search_ThereAreItems")
     public void testSearch_ThereAreItems() {
@@ -116,7 +112,6 @@ public class ItemRepositoryTest {
     }
 
     @Test
-    @Order(4)
     @DirtiesContext
     @DisplayName("ItemRepository_search_ThereAreNotItems")
     public void testSearch_ThereAreNotItems() {
@@ -151,7 +146,6 @@ public class ItemRepositoryTest {
     }
 
     @Test
-    @Order(5)
     @DirtiesContext
     @DisplayName("ItemRepository_findAllByRequest")
     public void testSearch_findAllByRequest() {

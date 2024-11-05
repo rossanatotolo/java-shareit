@@ -2,7 +2,6 @@ package ru.practicum.shareit.user;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.Mock;
@@ -56,7 +55,6 @@ public class UserServiceTest {
     }
 
     @Test
-    @Order(1)
     @DisplayName("UserService_userCreate")
     void testUserCreate() {
 
@@ -69,7 +67,6 @@ public class UserServiceTest {
     }
 
     @Test
-    @Order(2)
     @DisplayName("UserService_getUserById")
     void testGetUserById() {
 
@@ -79,7 +76,6 @@ public class UserServiceTest {
     }
 
     @Test
-    @Order(3)
     @DisplayName("UserService_getByIdNotUser")
     void testGetByIdNotUser() {
 
@@ -90,7 +86,6 @@ public class UserServiceTest {
     }
 
     @Test
-    @Order(4)
     @DisplayName("UserService_updateNotUser")
     void testUpdateNotUser() {
 
@@ -101,7 +96,6 @@ public class UserServiceTest {
     }
 
     @Test
-    @Order(5)
     @DisplayName("UserService_updateSetName")
     void testUpdateSetName() {
 
@@ -126,7 +120,6 @@ public class UserServiceTest {
     }
 
     @Test
-    @Order(6)
     @DisplayName("UserService_updateSetEmail")
     void testUpdateSetEmail() {
 
@@ -151,7 +144,6 @@ public class UserServiceTest {
     }
 
     @Test
-    @Order(7)
     @DisplayName("UserService_getAllUsers")
     void testGetAllUsers() {
         when(userRepository.findAll()).thenReturn(List.of(user1));
@@ -162,7 +154,6 @@ public class UserServiceTest {
     }
 
     @Test
-    @Order(8)
     @DisplayName("UserService_deleteNotUser")
     void testDeleteNotUser() {
 
@@ -173,7 +164,6 @@ public class UserServiceTest {
     }
 
     @Test
-    @Order(9)
     @DisplayName("UserService_userDelete")
     void testUserDelete() {
 

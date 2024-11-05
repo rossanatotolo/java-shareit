@@ -6,7 +6,6 @@ import jakarta.validation.Validator;
 import jakarta.validation.ValidatorFactory;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.autoconfigure.json.JsonTest;
 import org.springframework.test.annotation.DirtiesContext;
@@ -29,7 +28,6 @@ public class CommentDtoTest {
     }
 
     @Test
-    @Order(1)
     @DirtiesContext
     @DisplayName("CommentDtoTest_serializeJson")
     public void serializeJsonTest() throws Exception {
@@ -42,7 +40,6 @@ public class CommentDtoTest {
     }
 
     @Test
-    @Order(2)
     @DirtiesContext
     @DisplayName("CommentDtoTest_validation")
     public void validationTest() {

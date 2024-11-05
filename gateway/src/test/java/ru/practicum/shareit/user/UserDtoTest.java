@@ -7,7 +7,6 @@ import jakarta.validation.Validator;
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -29,7 +28,6 @@ public class UserDtoTest {
     ObjectMapper objectMapper;
 
     @Test
-    @Order(1)
     @DirtiesContext
     @DisplayName("UserDto_serializeJson")
     void serializeJsonTest() throws Exception {
@@ -43,7 +41,6 @@ public class UserDtoTest {
     }
 
     @Test
-    @Order(2)
     @DirtiesContext
     @DisplayName("UserDto_deserializeJson")
     void deserializeJsonTest() throws Exception {
@@ -55,7 +52,6 @@ public class UserDtoTest {
     }
 
     @Test
-    @Order(3)
     @DirtiesContext
     @DisplayName("UserDto_validation")
     void validationTest() {
@@ -70,7 +66,6 @@ public class UserDtoTest {
     }
 
     @Test
-    @Order(4)
     @DirtiesContext
     @DisplayName("UserDto_invalid")
     public void invalidTest() {

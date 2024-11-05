@@ -4,7 +4,6 @@ import lombok.RequiredArgsConstructor;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.MethodOrderer;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestMethodOrder;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -86,7 +85,6 @@ public class BookingServiceSpringBootTest {
     }
 
     @Test
-    @Order(1)
     @DirtiesContext
     @DisplayName("BookingService_createBooking")
     void testCreateBooking() {
@@ -103,7 +101,6 @@ public class BookingServiceSpringBootTest {
     }
 
     @Test
-    @Order(2)
     @DirtiesContext
     @DisplayName("BookingService_confirmationBooking")
     void testConfirmationBooking() {
@@ -114,7 +111,6 @@ public class BookingServiceSpringBootTest {
     }
 
     @Test
-    @Order(3)
     @DirtiesContext
     @DisplayName("BookingService_getBookingById")
     void testGetBookingById() {
@@ -129,7 +125,6 @@ public class BookingServiceSpringBootTest {
     }
 
     @Test
-    @Order(4)
     @DirtiesContext
     @DisplayName("BookingService_getAllBookingsFromUser")
     void testGetAllBookingsFromUser() {
@@ -140,7 +135,6 @@ public class BookingServiceSpringBootTest {
     }
 
     @Test
-    @Order(5)
     @DirtiesContext
     @DisplayName("BookingService_getAllBookingsFromOwner")
     void testGetAllBookingsFromOwner() {

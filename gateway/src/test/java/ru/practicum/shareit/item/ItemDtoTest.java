@@ -5,7 +5,6 @@ import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
 import jakarta.validation.Validator;
 import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -26,7 +25,6 @@ public class ItemDtoTest {
     private ObjectMapper objectMapper;
 
     @Test
-    @Order(1)
     @DirtiesContext
     @DisplayName("ItemDto_serializeJson")
     void serializeJsonTest() throws Exception {
@@ -43,7 +41,6 @@ public class ItemDtoTest {
     }
 
     @Test
-    @Order(2)
     @DirtiesContext
     @DisplayName("ItemDto_deserializeJson")
     void deserializeJsonTest() throws Exception {
@@ -55,7 +52,6 @@ public class ItemDtoTest {
     }
 
     @Test
-    @Order(3)
     @DirtiesContext
     @DisplayName("ItemDto_validation")
     void validationTest() {
