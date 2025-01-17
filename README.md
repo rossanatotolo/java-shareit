@@ -1,7 +1,8 @@
 # Java-shareit - микросервисное приложение для аренды вещей.
 #### Приложение ShareIt позволяет обмениваться с друзьями вещами на время: инструментами, гаджетами, книгами и так далее. Как каршеринг, только для вещей.
 
-#### Используемые инструменты: Java, Spring Boot, Spring Data JPA, PostgreSQL, REST API, Lombok, Docker, Mockito, JUnit. 
+#### Используемые инструменты: 
+### Java, Spring Boot, Spring Data JPA, PostgreSQL, REST API, Lombok, Docker, Mockito, JUnit. 
 
 #### Приложение содержит два микросервиса:
 - ShareIt-gateway - сервис по валидации входящих данных;
